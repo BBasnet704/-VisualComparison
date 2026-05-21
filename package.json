@@ -1,0 +1,29 @@
+{
+  "name": "-visualcomparison",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBasnet704/-VisualComparison.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/BBasnet704/-VisualComparison/issues"
+  },
+  "homepage": "https://github.com/BBasnet704/-VisualComparison#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.60.0",
+    "@types/node": "^25.8.0"
+  },
+  "scripts": {
+    "test:login": "npx playwright test tests/visual.login.spec.ts",
+    "test:inventory": "npx playwright test tests/visual.inventory.spec.ts"
+  },
+  "dependencies": {
+    "dotenv": "^17.4.2"
+  }
+}
