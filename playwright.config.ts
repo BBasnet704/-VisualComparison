@@ -9,7 +9,7 @@ export default defineConfig({
   use: {
     baseURL:process.env.BASE_URL!,
     testIdAttribute:'data-test',
-    headless: false,
+     headless: process.env.CI ? true : false,
    viewport: { width: 1280, height: 720 },
    
   },
