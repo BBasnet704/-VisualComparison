@@ -3,6 +3,8 @@ import dotenv from 'dotenv';
 dotenv.config();
 
 export default defineConfig({
+  snapshotPathTemplate:
+  '{testDir}/{testFilePath}-snapshots/{arg}{ext}',
   testDir: './tests',
   reporter: 'html',
   globalSetup: require.resolve('./global.setup.ts'),
