@@ -4,10 +4,10 @@ dotenv.config();
 
 export default defineConfig({
   snapshotPathTemplate:
-  '{testDir}/{testFilePath}-snapshots/{arg}{ext}',
+'{testDir}/{testFileDir}/__snapshots__/{testFileName}-{arg}{ext}',
   testDir: './tests',
   reporter: 'html',
-  globalSetup: require.resolve('./global.setup.ts'),
+  globalSetup: './global.setup.ts',
   use: {
     baseURL:process.env.BASE_URL!,
     testIdAttribute:'data-test',
@@ -19,7 +19,8 @@ export default defineConfig({
 expect:{
   toHaveScreenshot:{
     maxDiffPixels:100,
-   
+   animations: "disabled",
+    caret: "hide",
   }
 },
   
