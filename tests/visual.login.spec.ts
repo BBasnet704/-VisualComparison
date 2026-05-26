@@ -7,6 +7,6 @@ test.describe("Login Page Visual Comparison", () => {
     page, loginPage })=>{
  
     await loginPage.navigate();
-    await expect(page).toHaveScreenshot("login-page.png", { fullPage: true });
+    await expect(page).toHaveScreenshot( { fullPage: true });
     });
 });
